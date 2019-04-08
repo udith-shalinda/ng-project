@@ -1,0 +1,16 @@
+<form [formGroup]="loginForm" (ngSubmit)="submited()">
+  
+
+  <label for="name" class="basic-url">Username</label>
+    <input type="text" formControlName="firstName" placeholder="Username" class="form-control">
+  
+
+
+    <label for="password" >Password</label>
+    <input type="text" formControlName="lastName" placeholder="password" class="form-control">
+    <button class="btn btn-default" >Save</button>
+
+</form>
+
+<button class="btn btn-primary" (click)="getData()">getData</button>
+
