@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
   loginForm : FormGroup;
-  server:Server;
+  server:Server[];
 
   UserData={firstName:'fname',lastName:'lname'}
 
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   getData(){
     this.loginService.getServer().subscribe(
       d=>{
-        //this.server = response
+        this.server = d
         console.log(d)
        // this.UserData = d;
       }
